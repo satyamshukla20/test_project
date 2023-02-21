@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "test",
+  "version": "1.0",
+  "description": "A test enabling extension.",
+  "icons": {
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_icon": "icon128.png",
+    "default_popup": "templates/index.html"
+  },
+  "permissions": ["activeTab"],
+  // "content_security_policy": {
+  //   "extension_pages": "script-src 'self' https://cdn.jsdelivr.net"
+  // }
+}
