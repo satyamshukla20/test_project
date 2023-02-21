@@ -6,6 +6,10 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 import base64
+from flask_cors import CORS, cross_origin
+
+app = Flask(__name__)
+cors=CORS(app)
 
 
 from dotenv import load_dotenv
@@ -37,11 +41,13 @@ app.app_context().push()
 db.create_all()
 
 @app.route('/start_test',methods=["GET"])
+@cross_origin()
 def start_test():
     return render_template('index.html')
 
 
 @app.route('/start_test',methods=["POST"])
+@cross_origin
 def start_test_1():
     if request.method=="POST":
         print(request)
@@ -61,11 +67,13 @@ def start_test_1():
 
 
 @app.route('/test')
+@ cross_origin()
 def test():
     return render_template("test.html")
 
 
 @app.route('/image', methods=['POST'])
+@ cross_origin
 def image():
 
     data = request.get_json()
@@ -84,6 +92,7 @@ def image():
     cloudinary.uploader.upload(file=imageURL, folder=f"images", public_id=date_time, overwrite=True)
    
     return {},200
+
 
 if __name__=='__main__':
     app.run(debug=True)

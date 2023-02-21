@@ -10,8 +10,6 @@
     "default_icon": "icon128.png",
     "default_popup": "templates/index.html"
   },
-  "permissions": ["activeTab"],
-  // "content_security_policy": {
-  //   "extension_pages": "script-src 'self' https://cdn.jsdelivr.net"
-  // }
+  "permissions": ["activeTab"]
+  
 }
