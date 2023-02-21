@@ -47,7 +47,7 @@ def start_test():
 
 
 @app.route('/start_test',methods=["POST"])
-@cross_origin
+@cross_origin()
 def start_test_1():
     if request.method=="POST":
         print(request)
@@ -73,7 +73,7 @@ def test():
 
 
 @app.route('/image', methods=['POST'])
-@ cross_origin
+@ cross_origin()
 def image():
 
     data = request.get_json()
