@@ -8,8 +8,10 @@
   },
   "action": {
     "default_icon": "icon128.png",
-    "default_popup": "templates/index.html"
+    "default_popup": "index.html"
   },
-  "permissions": ["activeTab"]
-  
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  }
 }
