@@ -106,6 +106,9 @@ def user_image(id):
     image_list=list(Image.query.filter_by(id=id))
     return render_template("image.html",image_list=image_list)
     
+@app.route('/test', methods=['GET'])
+def test():
+   return render_template("camera.html")
     
 
 if __name__=='__main__':
