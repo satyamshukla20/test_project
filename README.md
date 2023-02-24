@@ -28,6 +28,7 @@
 7. For going to admin dashboard hit the url-[http://127.0.0.1:5000/dashboard]
 8. you can see all the details of all user who have started the test.
 9. Now photos are stored both on the local database as well as the cloud storage(cloudinary).
+10. to run the app run flask --app app debug run
 click on the buttons to check out the phot.
 
 
